@@ -1,15 +1,15 @@
 use super::*;
 
 #[derive(Debug)]
-pub struct Hostname<'a> {
-    name: &'a str,
+pub struct Hostname {
+    name: String,
 }
 
-impl Hostname<'_> {
-    pub fn new(name: &'static str) -> Self { Self { name } }
+impl Hostname {
+    pub fn new(name: String) -> Self { Self { name } }
 }
 
-impl VarIntLen for Hostname<'_> {
+impl VarIntLen for Hostname {
     fn len(&self) -> u8 {
         self.name.len() as u8
     }
@@ -21,8 +21,8 @@ impl VarIntLen for Hostname<'_> {
     }
 }
 
-impl ToString for Hostname<'_> {
+impl ToString for Hostname {
     fn to_string(&self) -> String {
-        self.name.to_string()
+        self.name.to_owned()
     }
 }
