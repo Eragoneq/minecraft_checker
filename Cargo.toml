@@ -8,3 +8,6 @@ edition = "2021"
 [dependencies]
 integer-encoding = "3.0.3"
 colored = "2"
+tokio = "1.19.2"
+mongodb = "2.2.2"
+rocket = "0.4.11"
