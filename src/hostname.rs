@@ -6,7 +6,9 @@ pub struct Hostname {
 }
 
 impl Hostname {
-    pub fn new(name: String) -> Self { Self { name } }
+    pub fn new(name: String) -> Self {
+        Self { name }
+    }
 }
 
 impl VarIntLen for Hostname {

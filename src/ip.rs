@@ -9,7 +9,9 @@ pub struct Ip {
 }
 
 impl Ip {
-    pub fn new(i1: u8, i2: u8, i3: u8, i4: u8) -> Self { Self { i1, i2, i3, i4 } }
+    pub fn new(i1: u8, i2: u8, i3: u8, i4: u8) -> Self {
+        Self { i1, i2, i3, i4 }
+    }
 }
 
 impl VarIntLen for Ip {
