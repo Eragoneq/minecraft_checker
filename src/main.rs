@@ -79,7 +79,7 @@ fn main() {
 
     let short_circuit = true;
 
-    let h = Handshake::new(Ip::new(144,21,32,166), 25565);
+    let h = Handshake::new(Ip::new(144, 21, 32, 166), 25565);
     println!("[INFO] Trying {}", h.to_string());
     match perform_connection(&h, Duration::from_millis(5000), false) {
         Err(e) => println!("[ERR] {:?}", e),
